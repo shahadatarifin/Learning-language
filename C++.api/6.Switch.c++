@@ -1,4 +1,5 @@
 //using if else
+
 #include <iostream>
 using namespace std;
 
@@ -26,6 +27,7 @@ int main(){
 
 
 //Using switch
+
 #include <iostream>
 using namespace std;
 
