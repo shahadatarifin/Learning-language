@@ -27,3 +27,37 @@ int main(){
     }
     return 0;
 }
+
+
+
+// find the maximum from 3 given numbers
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int a, b, c;
+    cin >> a >> b >> c;
+
+    if(a > b){
+        if(a > c){
+            cout << "maximum = " << a;
+        }else{
+            cout << "maximum = " << c;
+        }
+    }else{
+        if(b > c){
+            cout << "maximum = " << b;
+        }else{
+            cout << "maximum = " << c;
+        }
+    }
+    return 0;
+}
+
+
+
+// Find that, given number is odd or even
+
+
+
