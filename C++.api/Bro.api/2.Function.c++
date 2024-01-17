@@ -129,3 +129,87 @@ Variable Scope
 
 
 // Banking Practice Program
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+void showBalance(double balance);
+double deposit();
+double withdraw(double balance);
+
+int main() {
+    double balance = 99.99;
+    int choice = 0;
+
+    do {
+        cout << "\n******************" << endl;
+        cout << "1. show balance" << endl;
+        cout << "2. deposit money" << endl;
+        cout << "3. withdraw money" << endl;
+        cout << "4. exit" << endl;
+        cout << "******************" << endl;
+        cout << "Enter your choice: ";
+
+        cin >> choice;
+
+        cin.clear();
+        fflush(stdin);
+
+        switch (choice) {
+            case 1:
+                showBalance(balance);
+                break;
+
+            case 2:
+                balance += deposit();
+                showBalance(balance);
+                break;
+
+            case 3:
+                balance -= withdraw(balance);
+                showBalance(balance);
+                break;
+
+            case 4:
+                cout << "Thanks for visiting" << endl;
+                break;
+
+            default:
+                cout << "Invalid choice" << endl;
+        }
+    } while (choice != 4);
+
+    return 0;
+}
+
+void showBalance(double balance) {
+    cout << "Your balance is : $" << setprecision(2) << fixed << balance << endl;
+}
+
+double deposit() {
+    double amount = 0;
+
+    cout << "Enter amount to deposit: ";
+    cin >> amount;
+
+    if (amount > 0) {
+        return amount;
+    } else {
+        cout << "Invalid amount. Deposit unsuccessful." << endl;
+        return 0;
+    }
+}
+
+double withdraw(double balance) {
+    double amount = 0;
+
+    cout << "Enter amount to withdraw: ";
+    cin >> amount;
+
+    if (amount > balance || amount < 0) {
+        cout << "Invalid amount. Withdrawal unsuccessful." << endl;
+        return 0;
+    } else {
+        return amount;
+    }
+}
