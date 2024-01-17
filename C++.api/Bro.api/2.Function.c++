@@ -71,7 +71,7 @@ double cube(double a){
 
 
 
-// &
+// String
 #include <iostream>
 using namespace std;
 
@@ -90,3 +90,42 @@ int main(){
 string fullName(string a, string b){
     return a + " " + b;
 }
+
+
+
+// Overloaded Function
+#include <iostream>
+using namespace std;
+
+void pizza();
+void pizza (string topping1);
+void pizza (string topping1, string topping2);
+
+int main(){
+    pizza();
+    pizza("pepperoni");
+    pizza("pepperoni", "mashroom");
+
+    return 0;
+}
+
+void pizza(){
+    cout << "Here is you pizza" << endl;
+}
+void pizza(string topping1){
+    cout << "Here is your " << topping1 << " pizza" << endl;
+}
+void pizza(string topping1, string topping2){
+    cout << "Here is your " << topping1 << " and " << topping2 << " pizza" << endl;
+}
+
+
+/*
+Variable Scope
+    - Local Variables = declared inside a function or block {}
+    - Global Variables = declared outside of all functions
+*/
+
+
+
+// Banking Practice Program
