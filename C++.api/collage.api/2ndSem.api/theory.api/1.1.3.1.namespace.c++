@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-namespace first_space{
+namespace first_sapce{
     void func(){
         cout << "Inside first space" << endl;
     }
@@ -12,9 +12,8 @@ namespace second_space{
         cout << "Inside second space" << endl;
     }
 }
-
 int main(){
-    
-
+    second_space::func();
+    first_sapce::func();
     return 0;
 }

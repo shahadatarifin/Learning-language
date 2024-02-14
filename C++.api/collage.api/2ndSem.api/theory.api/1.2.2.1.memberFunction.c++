@@ -15,17 +15,17 @@ class room{
 };
 
 int main(){
-    int length, breadth, hight;
+    int length, breadth, height;
     
     cout << "Enter length of your room: ";
     cin >> length;
     cout << "Enter breadth of your room: ";
     cin >> breadth;
-    cout << "Enter hight of your room: ";
-    cin >> hight;
+    cout << "Enter height of your room: ";
+    cin >> height;
 
     room obj1;
-    int volume = obj1.volume(length, breadth, hight);
+    int volume = obj1.volume(length, breadth, height);
 
     cout << "volume of the room is : " << volume << endl;
 
