@@ -22,7 +22,7 @@ void insertAtTail(node* &head, int val){
 
     node* temp = head;
     while(temp->next != NULL){
-        temp = temp-> next;
+        temp = temp->next;
     }
 
     temp->next = n;
@@ -30,23 +30,39 @@ void insertAtTail(node* &head, int val){
 
 void insertAtHead(node* &head, int val){
     node* n = new node(val);
-    
+
     n->next = head;
     head = n;
 }
 
-bool search(node* head, int key){
+void deletion(node* &head, int val){
+    if (head == NULL) {
+        return;
+    }
+
+    if (head->data == val) {
+        node* todelete = head;
+        head = head->next;
+        delete todelete;
+        return;
+    }
+
     node* temp = head;
-    while(temp != NULL){
-        if(temp->data == key){
-            return true;
-        }
+    while(temp->next != NULL && temp->next->data != val){
         temp = temp->next;
     }
-    return false;
+
+    if (temp->next == NULL) {
+        return; // Value not found
+    }
+
+    node* todelete = temp->next;
+    temp->next = temp->next->next;
+    delete todelete;
 }
 
-void dislplay(node* head){
+
+void display(node* head){
     node* temp = head;
     while(temp != NULL){
         cout << temp->data << "->";
@@ -55,7 +71,25 @@ void dislplay(node* head){
     cout << "NULL" << endl;
 }
 
+
+
 int main(){
+    node* head = NULL;
+
+    insertAtTail(head, 1);
+    insertAtTail(head, 2);
+    insertAtTail(head, 3);
+
+    insertAtHead(head, 9);
+    insertAtHead(head, 8);
+
+    display(head);
+
+    deletion(head, 1);
+
+    display(head);
+
+
 
     return 0;
 }
