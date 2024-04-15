@@ -12,7 +12,7 @@ class node{
     }
 };
 
-void insert(node* &head, int val){
+void insertAtTail(node* &head, int val){
     node* n = new node(val);
 
     if (head == NULL){
@@ -28,6 +28,12 @@ void insert(node* &head, int val){
     temp->next = n;
 }
 
+void insertAtHead(node* &head, int val){
+    node* n = new node(val);
+
+    n->next = head;
+    head = n;
+}
 
 void display(node* head){
     node* temp = head;
@@ -43,9 +49,14 @@ void display(node* head){
 int main(){
     node* head = NULL;
 
-    insert(head, 1);
-    insert(head, 2);
-    insert(head, 3);
+    insertAtTail(head, 1);
+    insertAtTail(head, 2);
+    insertAtTail(head, 3);
+
+    display(head);
+
+    insertAtHead(head, 9);
+    insertAtHead(head, 8);
 
     display(head);
 
