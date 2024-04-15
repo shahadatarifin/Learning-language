@@ -53,7 +53,7 @@ void deletion(node* &head, int val){
     }
 
     if (temp->next == NULL) {
-        return; // Value not found
+        return;
     }
 
     node* todelete = temp->next;

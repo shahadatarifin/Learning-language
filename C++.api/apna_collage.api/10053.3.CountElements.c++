@@ -35,31 +35,6 @@ void insertAtHead(node* &head, int val){
     head = n;
 }
 
-void deletion(node* &head, int val){
-    if (head == NULL) {
-        return;
-    }
-
-    if (head->data == val) {
-        node* todelete = head;
-        head = head->next;
-        delete todelete;
-        return;
-    }
-
-    node* temp = head;
-    while(temp->next != NULL && temp->next->data != val){
-        temp = temp->next;
-    }
-
-    if (temp->next == NULL) {
-        return;
-    }
-
-    node* todelete = temp->next;
-    temp->next = temp->next->next;
-    delete todelete;
-}
 
 int count(node* head){
     int c = 0;
