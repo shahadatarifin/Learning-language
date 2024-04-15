@@ -12,6 +12,13 @@ class node{
     }
 };
 
+void insertAtHead(node* &head, int val){
+    node* n = new node(val);
+
+    n->next = head;
+    head = n;
+}
+
 void insertAtTail(node* &head, int val){
     node* n = new node(val);
 
@@ -37,12 +44,19 @@ void display(node* head){
     cout << "NULL" << endl;
 }
 
+
+
 int main(){
     node* head = NULL;
 
     insertAtTail(head, 1);
     insertAtTail(head, 2);
     insertAtTail(head, 3);
+
+    display(head);
+
+    insertAtHead(head, 9);
+    insertAtHead(head, 8);
 
     display(head);
 
