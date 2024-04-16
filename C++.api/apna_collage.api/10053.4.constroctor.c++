@@ -11,7 +11,15 @@ public:
         name = s;
         age = a;
         uid = u;
-    }
+    } // parameterised constructor
+
+    student(){
+        cout << "defoult constractor " << endl;
+    } // default constructor 
+
+    ~student(){
+        cout << "distructor called" << endl;
+    } // distructor
 
     void printinfo(){
         cout << "name: " << name << endl;
@@ -27,4 +35,5 @@ int main(){
     student b("shahadat", 19, 14289);
     b.printinfo();
 
+    student f;
 }
