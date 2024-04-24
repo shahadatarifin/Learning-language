@@ -1,10 +1,17 @@
 #include <iostream>
 using namespace std;
-#define n 6
 
 int main(){
-    int arr[n] = {12, 45, 23, 51, 19, 8};
-    
+    int n;
+    cout << "Enter elements number of array: " << endl;
+    cin >> n;
+
+    int arr[n];
+    cout << "Enter elements: " << endl;
+    for(int i = 0; i < n; i++){
+        cin >> arr[i];
+    }
+
     for(int i = 1; i < n; i++){
         int current = arr[i];
         int j = i-1;
