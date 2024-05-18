@@ -11,3 +11,16 @@ input           output
 '''
 
 n = int(input("Enter a number: "))
+num = abs(n)
+
+rev = num % 10
+num = num // 10
+while(num > 0):
+    r = num % 10
+    num = num // 10
+    rev = rev*10 + r
+
+if(n < 0):
+    rev = rev * (-1)
+
+print(rev)
