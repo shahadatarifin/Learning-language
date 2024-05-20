@@ -23,5 +23,5 @@ endswith()  -
 
 
 
-i don't write all of them, it's borring
+i don't wanna write all of them, it's borring
 '''
