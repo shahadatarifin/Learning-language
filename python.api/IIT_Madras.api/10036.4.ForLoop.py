@@ -26,3 +26,5 @@ if(r == n):
     print("Palindrome")
 else:
     print("Not Palindromme")
+
+
