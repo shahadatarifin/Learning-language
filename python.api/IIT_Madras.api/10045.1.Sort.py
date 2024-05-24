@@ -15,7 +15,6 @@ while(len(l) != 0):
             min = l[i]
     a.append(min)
     l.remove(min)
-
 print(l)
 
 print(a)
