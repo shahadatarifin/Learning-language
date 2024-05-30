@@ -22,8 +22,16 @@ c = [[0,0,0], [0,0,0], [0,0,0]]
 
 for i in range(dimention):
     for j in range(dimention):
-        c[i][j] = a[i][j] + b[i][j]
+        for k in range(dimention):
+            c[i][j] = c[i][j] + a[i][k]*b[k][j]
+    
+    print(c[i])
 
-print(c[0])
-print(c[1])
-print(c[2])
+
+# easiest way
+print("\n\n\n\n")
+import numpy
+
+x = numpy.mat(a)
+y = numpy.mat(b)
+print(x*y)

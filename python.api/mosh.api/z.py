@@ -1,3 +1,6 @@
-birth_year = int(input("Birth Year: "))
-age = 2024 - birth_year
-print(age)
+f = [5, 2, 5, 2, 2]
+
+for i in f:
+    print("")
+    for j in range(i):
+        print("x", end = '')
