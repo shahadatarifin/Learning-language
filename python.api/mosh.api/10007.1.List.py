@@ -9,8 +9,6 @@ print(l)
 
 
 
-
-
 # Another solution 
 m = []
 
