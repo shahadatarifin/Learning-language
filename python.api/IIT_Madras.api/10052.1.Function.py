@@ -1,3 +1,5 @@
+# by using function finding minimum element of the list, maximum element of the list etc
+
 def list_min(l):
     mini = l[0]
     for i in l[:]:
