@@ -1,37 +1,31 @@
-dimention = 3
+m = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
 
-r1 = [1, 2, 3]
-r2 = [4, 5, 6]
-r3 = [7, 8, 9]
+l = [
+    [1, 2, 1],
+    [6, 2, 3],
+    [4, 2, 1]
+]
 
-s1 = [1, 2, 1]
-s2 = [6, 2, 3]
-s3 = [4, 2, 1]
+c = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]
+]
 
-a = []
-a.append(r1)
-a.append(r2)
-a.append(r3)
-
-b = []
-b.append(s1)
-b.append(s2)
-b.append(s3)
-
-c = [[0,0,0], [0,0,0], [0,0,0]]
-
-for i in range(dimention):
-    for j in range(dimention):
-        for k in range(dimention):
-            c[i][j] = c[i][j] + a[i][k]*b[k][j]
-    
-    print(c[i])
-
+for i in range(3):
+    for j in range(3):
+        for k in range(3):
+            c[i][j] += m[i][k] * l[k][j]
+print(c)
 
 # easiest way
 print("\n\n\n\n")
 import numpy
 
-x = numpy.mat(a)
-y = numpy.mat(b)
+x = numpy.mat(m)
+y = numpy.mat(l)
 print(x*y)

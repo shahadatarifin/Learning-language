@@ -8,6 +8,7 @@ for i in range(len(l)):
 print(sum)
 
 
+
 # dot product
 l = [1, 2, 3, 4]
 m = [4, 6, 7, 8]
