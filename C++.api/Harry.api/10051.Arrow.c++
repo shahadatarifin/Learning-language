@@ -20,13 +20,26 @@ void complex :: setData(int a, int b)
 }
 int main()
 {
-    // complex obj;
-    // complex *ptr = &obj;
-    // (*ptr).setData(3, 5);
-    // (ptr).getData();
+    
+    // Complext c1;
+    // c1.setData(1, 5);
+    // c1.getData();
 
-    complex *ptr = new complex;
-    ptr -> setData(3, 5);
-    ptr -> getData();
+    // Complext c1;
+    // Complext *ptr = &c1;
+    // (*ptr).setData(1, 5);
+    // (*ptr).getData();
+
+    // Complext *ptr = new Complext;
+    // (*ptr).setData(1, 5);
+    // (*ptr).getData();
+
+    // Complext *ptr = new Complext;
+    // ptr->setData(1, 5);
+    // ptr->getData();
+
+
+    
+    
     return 0;
 }
