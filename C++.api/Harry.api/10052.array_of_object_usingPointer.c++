@@ -6,37 +6,41 @@ class ShopItem{
     float price;
 
     public:
-
     void setData(int a, float b){
         id = a;
         price = b;
     }
 
-    void getData(int i){
-        cout << "code of item " << i+1 << " is : " << id << endl;
-        cout << "price of item " << i+1 << " is : " << price << endl;
+    void getData(){
+        cout << "Code of this item is: " << id << endl;
+        cout << "Price of this item is: " << price << endl;
     }
 };
+    //1. pen
+    //2. pencil
+    //3. notebook
 
 int main(){
-    
     int size = 3;
     ShopItem *ptr = new ShopItem[size];
     ShopItem *ptrTemp = ptr;
     
     int p;
     float q;
-
-    for(int i = 0; i < size; i++){
-        cout << "Enter the code and price of item " << i+1 << " : " ;
+    for (int i = 0; i < size; i++){
+        cout << "Enter id and price of item " << i+1 << " : ";
         cin >> p >> q;
+        // (*ptr).setData(p, q);
         ptr->setData(p, q);
         ptr++;
     }
 
+    ptr = ptrTemp;
+
     for (int i = 0; i < size; i++){
-        ptrTemp->getData(i);
-        ptrTemp++;
+        cout << "Item number: " << i+1 << endl;
+        (*ptr).getData();
+        ptr++;
     }
 
     return 0;
