@@ -39,7 +39,8 @@ int main(){
 
     for (int i = 0; i < size; i++){
         cout << "Item number: " << i+1 << endl;
-        (*ptr).getData();
+        // (*ptr).getData();
+        ptr->getData();
         ptr++;
     }
 
