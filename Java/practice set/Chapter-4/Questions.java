@@ -15,4 +15,15 @@
     2.5L - 5.0L         5%
     5.0L - 10.0L        20%
     above  10.0L        30%
+
+4. Write a java program to find out the day of the week given the number
+    [1 for monday, 2 for tuesday...and so on!]
+
+5.  Write a java program to find whether a year entered by the user
+    is leap year or not
+
+6.  Write a program to find out the tye of website the url
+    .com -> commertial website
+    .org -> organization website
+    .bd -> bangladeshi website
  */
